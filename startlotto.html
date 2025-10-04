@@ -1,0 +1,21 @@
+[startLotto.html](https://github.com/user-attachments/files/22695861/startLotto.html)
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>武器ガチャ</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+</head>
+<body>
+    <div class="container"> <!-- 新しい <div> 要素で囲む -->
+        <h1>武器ガチャ</h1><br>
+        <button onclick="startLotto()">抽選開始</button>
+    </div> <!-- .container 終了 -->
+    <script>
+        function startLotto() {
+            window.location.href = "/weapon"; // "/weapon"に遷移
+        }
+    </script>
+</body>
+</html>
