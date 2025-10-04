@@ -1,0 +1,22 @@
+[WeaponLotto.html](https://github.com/user-attachments/files/22695864/WeaponLotto.html)
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>武器抽選結果</title>
+    <!-- CSS ファイルの適用 -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>抽選結果</h1>
+        <div class="result">
+            <p class="main-weapon">メイン武器: <span th:text="${mainWeapon}">N/A</span></p>
+            <p class="sub-weapon">サブ武器: <span th:text="${subWeapon}">N/A</span></p>
+        </div>
+        <div class="button-container">
+            <a href="/startLotto">もう一度抽選</a>
+        </div>
+    </div>
+</body>
+</html>
