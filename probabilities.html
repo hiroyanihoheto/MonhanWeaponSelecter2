@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>現在の抽選確率</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>現在の抽選確率</h1>
+        <table border="1">
+            <tr>
+                <th>武器名</th>
+                <th>確率</th>
+            </tr>
+            <tr th:each="weapon : ${weapons}">
+                <td th:text="${weapon.name}">武器名</td>
+                <td th:text="${#numbers.formatDecimal(weapon.probability * 100, 1, 2)} + '%'">確率</td>
+            </tr>
+        </table>
+        <br>
+        <a href="/startLotto">抽選画面へ戻る</a>
+    </div>
+</body>
+</html>
